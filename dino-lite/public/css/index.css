@@ -1852,6 +1852,9 @@ span.select2-selection.select2-selection--single {
 }
 .search-input ,.search-button {
   vertical-align: middle;
+  -webkit-border-radius:0;
+  -moz-border-radius:0;
+  border-radius:0;
 }
 .search-input {
   padding: 0 10px;
@@ -2708,7 +2711,10 @@ span.select2-selection.select2-selection--single {
     font-size: 14px;
   }
 }
-@media (max-width: 690px) {
+@media (max-width: 667px) {
+  .releasenotes.popup .container {
+    min-height: 300px;
+  }
   .body {
     overflow-x: hidden;
   }
