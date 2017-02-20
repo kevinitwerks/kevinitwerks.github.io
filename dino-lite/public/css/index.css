@@ -465,7 +465,8 @@ html {
 }
 body {
   font-family: Arial;
-  font-size: 500;
+  font-size: 16px;
+  font-weight: 500;
   width: 100%;
   min-height: calc(100% - 70px);
   position: relative;
@@ -534,7 +535,7 @@ body {
   color: #fff;
   background: #0068B7;
 }
-.header::before {
+.header::after {
   content: '';
   width: 0;
   height: 100%;
@@ -544,6 +545,9 @@ body {
 .header::after {
   content: '';
   clear: both;
+}
+.header .mobile-menu {
+  display: none;
 }
 .header .title {
   display: inline-block;
@@ -612,6 +616,9 @@ body {
   line-height: 100px;
   border-left: 1px solid #ccc;
 }
+.mobile-filter {
+  display: none;
+}
 .body .banner {
   width: 100%;
   height: calc(100vh - 150px);
@@ -633,6 +640,7 @@ body {
   min-width: 100%;
 }
 .body .banner .scroll-down {
+  cursor: pointer;
   position: absolute;
   bottom: 50px;
   color: #fff;
@@ -783,12 +791,17 @@ body {
   margin-top: 80px;
   width: 80%;
   display: inline-block;
+  text-align: center;
+}
+.body .page-content .solutions {
+  text-align: left;
 }
 .body .page-content .products-list.right {
   float: right;
 }
 .body .page-content .products-list .item {
   display: inline-block;
+  vertical-align: top;
   width: 33%;
   margin-bottom: 60px;
   text-align: center;
@@ -890,8 +903,11 @@ body {
 }
 .popup .container {
   background: #fff;
-  width: 860px;
-  height: 400px;
+  max-width: 860px;
+  max-height: 400px;
+  width: 60%;
+  height: 40%;
+  min-height: 240px;
   position: absolute;
   top: 0;
   left: 0;
@@ -951,6 +967,7 @@ body {
   border-radius: 3px;
   padding: 0 5px;
   color: #555;
+  outline: none;
 }
 .popup .container .content .popup-submit {
   cursor: pointer;
@@ -1004,21 +1021,20 @@ body {
   color: #0068B7;
   font-size: 28px;
   font-weight: 700;
-  margin-left: 70px;
+  margin-left: 5%;
   margin-top: 40px;
 }
 .body .details-content .big-round-image {
   width: 450px;
   height: 450px;
+}
+.body .details-content .big-round-image  img {
+  height: auto;
+  width: 100%;
   border: 1px solid #555;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
-  overflow: hidden;
-}
-.body .details-content .big-round-image  img {
-  height: 100%;
-  width: auto;
 }
 .body .details-content .product-details {
   width: 80%;
@@ -1058,6 +1074,10 @@ body {
   width: 25%;
   display: inline-block;
   vertical-align: middle;
+}
+.body .details-content .details-features .icon img {
+  width: 100%;
+  height: auto;
 }
 .body .details-content .details-features .text {
   width: 75%;
@@ -1099,6 +1119,7 @@ body {
 }
 .product.popup .container .content .popup-email {
   border-color: #95989A;
+  outline: 0;
 }
 .product.popup .container .content .popup-description {
   font-size: 22px;
@@ -1160,15 +1181,17 @@ body {
 }
 .inline {
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: top;
 }
 .three {
   width: 29% !important;
   height: auto !important;
+  vertical-align: middle;
 }
 .seven {
-  width: calc(69% - 60px);
+  width: calc(68% - 60px);
   padding: 0 30px;
+  text-align: left;
 }
 .body .compare-content .products-list .item a {
   -webkit-border-radius: 15px;
@@ -1213,14 +1236,14 @@ body {
   cursor: default;
 }
 .compare-details-content {
-  width: 70%;
+  width: 75%;
   margin: auto;
 }
 .compare-details-content .images-area.float {
   position: fixed;
   top: 0;
   background: #fff;
-  width: 70%;
+  width: 75%;
   box-shadow: 0px 6px 4px -5px #555;
 }
 .compare-details-content .images-area.float img {
@@ -1357,8 +1380,8 @@ body {
 }
 .solution-banner {
   width: 70%;
-  height: 220px;
   margin: auto;
+  margin-bottom: 30px;
 }
 .solution-banner img {
   width: 100%;
@@ -1538,7 +1561,7 @@ body {
   -moz-border-radius: 10px;
   border-radius: 10px;
   color: #555;
-  height: 600px;
+  min-height: 340px;
 }
 .releasenotes.popup .container h3, .releasenotes.popup .container h4 {
   color: #555;
@@ -1590,7 +1613,7 @@ body {
   list-style-type: disc;
 }
 .overflow-area {
-  height: 550px;
+  height: 80%;
   overflow-y: auto;
 }
 .resellers, .company {
@@ -1760,8 +1783,8 @@ span.select2-selection.select2-selection--single {
   width: 40%;
 }
 .news-details .text {
-  width: 50%;
-  padding: 0 5%;
+  width: 55%;
+  padding-left: 5%;
 }
 .news-details .image img {
   width: 100%;
@@ -1782,10 +1805,10 @@ span.select2-selection.select2-selection--single {
 .body .news-details-links {
   text-align: left;
   width: 75%;
-  margin: auto;
+  margin: 80px auto;
   font-size: 0;
-  margin-top: 80px;
   position: relative;
+  padding-bottom: 20px;
 }
 .body .news-details-links .back-link {
   width: auto;
@@ -1832,8 +1855,8 @@ span.select2-selection.select2-selection--single {
 }
 .search-input {
   padding: 0 10px;
-  width: 290px;
-  height: 40px;
+  width: 60%;
+  height: 30%;
   border: 0;
   border-right: 1px solid #95989A;
   outline: 0;
@@ -1845,8 +1868,8 @@ span.select2-selection.select2-selection--single {
   background: #fff;
   border: 0;
   outline: 0;
-  width: 90px;
-  height: 40px;
+  width: 18%;
+  height: 30%;
   cursor: pointer;
   padding: 0;
   margin: 0;
@@ -2124,4 +2147,1011 @@ span.select2-selection.select2-selection--single {
   margin: 0 0 40px 0;
   line-height: normal;
   color: #888;
+}
+@media (max-width: 1280px) {
+  body {
+    min-height: calc(100% - 50px);
+    padding-bottom: 50px;
+  }
+  .header {
+    height: 80px;
+  }
+  .header .search {
+    line-height: 80px;
+  }
+  .header .navigator a {
+    padding: 0 15px;
+    font-size: 16px;
+  }
+  .body .banner {
+    height: calc(100vh - 130px);
+  }
+  .body .banner .scroll-down {
+    bottom: 0;
+  }
+  .body .submenu a {
+    font-size: 15px;
+  }
+  .footer {
+    height: 50px;
+    font-size: 11px;
+  }
+  .footer .social-medias i {
+    font-size: 18px;
+  }
+  .body .page-content .products-list .item {
+    width: 32%;
+  }
+  .body .page-content .filter.sidebar {
+    margin-left: 1%;
+    width: 19%;
+  }
+  .body .page-content .filter.sidebar .item .group-title {
+    font-size: 15px;
+  }
+  .body .page-content .filter.sidebar .item .group-content .radio label,
+  .body .page-content .filter.sidebar .item .group-content .checkbox label {
+    font-size: 13px;
+  }
+  .body .page-content .products-list .item .text {
+    font-size: 17px;
+  }
+  .body .page-content .products-list .item .features i {
+    font-size: 19px;
+  }
+  .body .page-title .page-text {
+    font-size: 28px;
+  }
+  .body .page-title .compare-link {
+    font-size: 21px;
+  }
+  .body .side-title {
+    font-size: 24px;
+  }
+  .body .details-content .big-round-image {
+    width: 300px;
+    height: 300px;
+  }
+  .body .details-content .product-details .product-details-info {
+    padding-left: 80px;
+  }
+  .body .details-content .product-details .product-details-info .name {
+    font-size: 28px;
+  }
+  .body .details-content .product-details .product-details-info .description {
+    font-size: 20px;
+  }
+  .body .details-content .details-features .text {
+    font-size: 14px;
+  }
+  .body .bottom-links a {
+    font-size: 18px;
+  }
+  .product.popup .container .content .popup-description {
+    font-size: 19px;
+  }
+  .product.popup .container {
+    width: 600px;
+  }
+  .compare-content .instruction {
+    font-size: 18px;
+  }
+  .compare-content .compare-button {
+    width: 150px;
+    height: 25px;
+    line-height: 18px;
+  }
+  .compare-content {
+    padding: 0 20px;
+    width: calc(80% - 50px);
+  }
+  .body .compare-content .products-list .item {
+    width: 49%;
+  }
+  .three {
+    width: 28% !important;
+  }
+  .seven {
+    width: calc(68% - 10px);
+    padding: 0 10px;
+    padding-right: 0;
+  }
+  .body .page-content .products-list .item {
+    margin-bottom: 30px;
+  }
+  .body .compare-content .products-list .item a {
+    height: 150px;
+  }
+  .compare-details-content .images-area .image img {
+    height: 200px;
+  }
+  .compare-details-content .images-area .image .name,
+  .compare-details-content .compare-features .header {
+    font-size: 23px;
+  }
+  .compare-details-content .compare-features .details .product1,
+  .compare-details-content .compare-features .details .product2 {
+    font-size: 16px;
+  }
+  .body .page-content .products-list.solutions .item img {
+    width: 140px;
+    height: 140px;
+  }
+  .popup .container .content .popup-title {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+  .popup .container .content .popup-description {
+    margin: 0 0 20px 0;
+  }
+  .sidebar.category .item {
+    font-size: 13px;
+  }
+  .resellers .resellers-list .icon {
+    font-size: 40px;
+  }
+  .resellers .resellers-list .name {
+    font-size: 22px;
+  }
+  .resellers .resellers-list .description {
+    font-size: 16px;
+  }
+  .resellers .resellers-list .info {
+    padding-right: 2%;
+  }
+  .resellers .resellers-list .contact {
+    width: 28%;
+  }
+  .resellers .resellers-list .contact,
+  .resellers .resellers-list .contact a {
+    font-size: 14px;
+  }
+  .company .address,
+  .company .contact,
+  .company .contact a {
+    font-size: 16px;
+  }
+  .news-list .content .title {
+    font-size: 18px;
+  }
+  .news-list .content .date{
+    margin: 10px 0;
+  }
+  .news-list .content .summary {
+    font-size: 16px;
+  }
+  .news-details .title {
+    font-size: 22px;
+  }
+  .news-details .date {
+    margin: 20px 0;
+  }
+  .news-details .content {
+    font-size: 16px;
+    line-height: 25px;
+  }
+  .body .news-details-links {
+    margin: 40px auto;
+  }
+  .search-bar {
+    top: 80px;
+    width: 380px;
+    height: 80px;
+    line-height: 80px;
+  }
+  .search-input {
+    font-size: 16px;
+  }
+  .news-list {
+    margin-top: 20px;
+  }
+  .help-area {
+    height: 300px;
+  }
+  .help-area .text {
+    font-size: 26px;
+  }
+  .help-area input, .help-area button {
+    height: 45px;
+    font-size: 17px;
+  }
+  .help-area input {
+    width: 550px;
+  }
+  .help-area button {
+    width: 45px;
+  }
+  .help-product-area .text {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  .help-product-area .product {
+    width: 150px;
+    height: 150px;
+    line-height: 150px;
+    font-size: 14px;
+  }
+  .tabs {
+    height: 50px;
+    line-height: 50px;
+  }
+  .tabs .item {
+    font-size: 22px;
+  }
+  .support-product .tabs-list .item .title,
+  .accordion-item h4 {
+    font-size: 19px;
+  }
+  .support-product .tabs-list .item .opener {
+    font-size: 34px;
+  }
+  .support-product .tabs-list .item {
+    line-height: 70px;
+  }
+  .accordion-item p {
+    font-size: 14px;
+  }
+  .service-warranty, .model-advice {
+    margin-top: 50px;
+  }
+  .model-advice-form .advice-btn {
+    font-size: 13px;
+  }
+}
+@media (max-width: 960px) {
+  .show-mobilemenu {
+    overflow: hidden;
+  }
+  .header .navigator {
+    position: fixed;
+    left: -200px;
+    width: 200px;
+    z-index: 2;
+    background: #fff;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+    overflow-y: auto;
+  }
+  .show-mobilemenu .header .navigator {
+    left: 0;
+  }
+  .header .navigator .link {
+    z-index: 1;
+  }
+  .header .navigator::after {
+    display: none;
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 200px;
+    height: 100%;
+    width: calc(100vw - 200px);
+    background: rgba(0,0,0,.5);
+    z-index: 0;
+  }
+  .show-mobilemenu .header .navigator::after {
+    display: block;
+  }
+  .header .navigator .link {
+    display: block;
+  }
+  .header .navigator a {
+    display: block;
+    color: #555;
+    padding: 30px 0;
+    text-align: center;
+    margin-right: 0;
+  }
+  .header {
+    text-align: center;
+  }
+  .header .title {
+    margin: 0;
+  }
+  .header .mobile-menu {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    border-right: 1px solid #ccc;
+    float: left;
+    font-size: 21px;
+    line-height: 80px;
+    cursor: pointer;
+  }
+  .header .search {
+    width: 80px;
+  }
+  .body .main-products .item, .body .random-products .item {
+    height: 50vh;
+  }
+  .body .main-products .item .text .title,
+  .body .random-products .item .text .title {
+    font-size: 16px;
+  }
+  .body .main-products .item .text .description,
+  .body .random-products .item .text .description {
+    font-size: 12px;
+  }
+  .popup .container .content .popup-title {
+    font-size: 18px;
+  }
+  .popup .container .content .popup-description,
+  .popup .container .content .popup-email,
+  .popup .container .content .popup-submit {
+    font-size: 14px;
+  }
+  .body .page-content .products-list .item img {
+    width: 150px;
+    height: 150px;
+  }
+  .body .page-content .products-list .item .text {
+    font-size: 16px;
+  }
+  .body .page-content .filter.sidebar {
+    display: none;
+  }
+  .body .page-content .filter.sidebar.show {
+    display: block;
+    width: 100%;
+    position: absolute;
+    margin: 0;
+    background: #fff;
+    z-index: 1;
+    top: 110px;
+  }
+  .body .page-content .products-list.right {
+    float: none;
+    width: 100%;
+  }
+  .body .page-content .products-list .item .features i {
+    font-size: 16px;
+    margin-right: 15px;
+  }
+  .body .page-title .compare-link {
+    right: 10px;
+    top: 5px;
+  }
+  .mobile-filter {
+    display: block;
+    background: #f7f7f7;
+    color: #555;
+    font-size: 14px;
+    text-align: center;
+    height: 30px;
+    cursor: pointer;
+  }
+  .mobile-filter::after {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+    width: 0;
+  }
+  .mobile-filter .title {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .body .page-content .products-list.right.hide {
+    display: none;
+  }
+  .body .details-content .product-details .big-round-image,
+  .body .details-content .product-details .product-details-info {
+    display: block;
+    padding: 0;
+    margin: auto;
+  }
+  .body .details-content .product-details .product-details-info .name,
+  .body .details-content .product-details .product-details-info .description {
+    margin: 10px 0;
+  }
+  .body .details-content .details-features .item {
+    width: 100%;
+    padding: 0;
+  }
+  .body .bottom-links .back-link {
+    width: calc(15% - 20px);
+  }
+  .compare-content {
+    width: calc(100% - 20px);
+    padding: 0 10px;
+  }
+  .body .page-content .products-list .item .text,
+  .body .compare-content .products-list .item .description {
+    font-size: 14px;
+  }
+  .body .compare-content .products-list .item .description {
+    margin: 5px 0;
+  }
+  .body .page-content .products-list .item img,
+  .body .page-content .products-list .item .inline {
+    vertical-align: middle;
+  }
+  .compare-details-content .compare-features .header {
+    text-align: left;
+    padding: 5px 0;
+    margin-bottom: 5px;
+  }
+  .compare-details-content .images-area .image .name,
+  .compare-details-content .compare-features .header {
+    font-size: 18px;
+  }
+  .compare-details-content .compare-features .details .product1,
+  .compare-details-content .compare-features .details .product2 {
+    font-size: 14px;
+  }
+  .body .bottom-links.compare-back {
+    top: 0;
+    margin: 15px 0 20px 0;
+  }
+  .body .page-content .products-list.solutions .item {
+    width: 32%;
+  }
+  .solution-inner,
+  .solution-inner-list {
+    width: 95%
+  }
+  .solution-banner,
+  .solution-details,
+  .solution-details-list {
+    width: 95%;
+  }
+  .sidebar.category {
+    display: none;
+    position: absolute;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    top: 110px;
+    background: #fff;
+    border-bottom: 1px solid #555;
+    text-align: center;
+  }
+  .sidebar.category .item {
+    margin: 20px 0;
+  }
+  .sidebar.category.show {
+    display: block;
+  }
+  .download-content {
+    width: 100%;
+  }
+  .tabs,
+  .download-content .download-list {
+    width: 95%;
+  }
+  .download-content .download-list {
+    margin-top: 20px;
+  }
+  .body .page-content .download-content.hide {
+    display: none;
+  }
+  .releasenotes.popup .container {
+    width: 70%;
+    min-height: 400px;
+  }
+  .releasenotes.popup .container h3 {
+    margin: 15px;
+  }
+  .releasenotes.popup .container h4 {
+    margin: 0 30px 15px 30px;
+  }
+  .releasenotes .version-list {
+    margin: 0 45px;
+  }
+  .releasenotes .briefs {
+    margin: 0 15px;
+  }
+  .resellers {
+    margin-left: 20px;
+    width: calc(60% - 21px);
+  }
+  .resellers .resellers-list .name {
+    font-size: 18px;
+  }
+  .resellers .resellers-list .description {
+    font-size: 14px;
+    margin-top: 0;
+  }
+  .resellers .resellers-list .info {
+    width: 80%;
+    margin-left: 10px;
+  }
+  .resellers .resellers-list .contact {
+    display: block;
+    width: auto;
+    margin-left: calc(10% + 10px);
+    margin-top: 10px;
+  }
+  .company {
+    width: calc(40% - 60px);
+  }
+  .news-list .content .title {
+    font-size: 16px;
+  }
+  .news-list .content .date {
+    font-size: 12px;
+  }
+  .news-list .content .summary {
+    font-size: 14px;
+  }
+  .news-list .image,
+  .news-list .content {
+    vertical-align: middle;
+  }
+  .news-details .image {
+    display: block;
+    margin: auto;
+  }
+  .news-details .text {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+  }
+  .body .news-details-links .share {
+    left: 5%;
+  }
+  .help-product-area,
+  .support-product .tabs,
+  .support-product .tabs-list {
+    width: 95%;
+  }
+  .model-advice-form input, .model-advice-form textarea {
+    width: 80%;
+  }
+  .model-advice-form .advice-btn {
+    width: 15%
+  }
+  .search-button {
+    font-size: 14px;
+  }
+}
+@media (max-width: 690px) {
+  .body {
+    overflow-x: hidden;
+  }
+  .header,
+  .header .mobile-menu,
+  .header .search {
+    height: 50px;
+  }
+  .header .mobile-menu,
+  .header .search {
+    width: 50px;
+    line-height: 50px;
+    font-size: 16px;
+  }
+  .header .title .main-title {
+    font-size: 18px;
+  }
+  .header .title .sub-title {
+    font-size: 9px
+  }
+  .body .banner .scroll-down {
+    font-size: 40px;
+  }
+  .popup .container {
+    width: 95%;
+  }
+  .popup .container .content .popup-title {
+    font-size: 14px;
+  }
+  .popup .container .content .popup-description,
+  .popup .container .content .popup-email,
+  .popup .container .content .popup-submit {
+    font-size: 12px;
+  }
+  .popup .container .content .popup-email,
+  .popup .container .content .popup-submit {
+    height: 25px;
+    line-height: 20px;
+  }
+  .popup .container .content .popup-submit {
+    width: 60px;
+  }
+  .popup .popup-close {
+    font-size: 21px;
+  }
+  .body .submenu {
+    white-space: nowrap;
+    display: block;
+    font-size: 0;
+    overflow-x: auto;
+  }
+  .body .submenu a {
+    display: inline-block;
+    height: 100%;
+    overflow: hidden;
+    padding: 0 10px;
+    font-size: 12px;
+  }
+  .body .main-products .item, .body .random-products .item {
+    width: 100%;
+  }
+  .body .main-products .item .text, .body .random-products .item .text {
+    max-width: 50%;
+  }
+  .header .navigator a {
+    padding: 15px 0;
+  }
+  .search-bar {
+    width: 100%;
+    top: 50px;
+  }
+  .body .page-title .page-text {
+    font-size: 21px;
+  }
+  .body .page-title .sub-text {
+    font-size: 12px;
+  }
+  .body .page-title {
+    margin-top: 30px;
+  }
+  .body .page-content .products-list {
+    width: 100%;
+    margin-top: 30px;
+    font-size: 0;
+    text-align: left;
+  }
+  .body .page-content .products-list .item {
+    width: 50%;
+  }
+  .body .page-content .products-list .item img {
+    width: 100px;
+    height: 100px;
+  }
+  .body .page-content .products-list .item .text,
+  .body .compare-content .products-list .item .description {
+    font-size: 12px;
+  }
+  .body .page-title .page-text {
+    font-size: 18px;
+  }
+  .body .page-title .compare-link {
+    font-size: 12px;
+    top: 5px;
+    right: 5px;
+  }
+  .body .page-content .products-list .item .features i {
+    font-size: 14px;
+  }
+  .body .details-content .big-round-image  img{
+    width: 80%;
+  }
+  .body .details-content .product-details .big-round-image{
+    text-align: center;
+    height: auto;
+  }
+  .body .details-content .product-details .product-details-info .name {
+    font-size: 16px;
+  }
+   .body .details-content .product-details .product-details-info .description{
+     font-size: 12px;
+   }
+   .body .details-content .details-features .text {
+     font-size: 10px;
+   }
+   .body .bottom-links a {
+     font-size: 11px;
+   }
+   .body .bottom-links .back-link {
+      padding-right: 5px;
+      width: calc(15% - 5px);
+   }
+   .product.popup .container {
+     width: 95%;
+   }
+   .product.popup .container .content .popup-description {
+     font-size: 14px;
+   }
+   .compare-content .instruction {
+     font-size: 12px;
+     text-align: left;
+   }
+   .compare-button-container {
+     position: fixed;
+     width: 100%;
+     height: 50px;
+     line-height: 50px;
+     background: #fff;
+     border-top: 1px solid #ccc;
+     bottom: 0;
+     left: 0;
+     z-index:9;
+     text-align: center;
+   }
+   .compare-content .compare-button {
+     float: none;
+     font-size: 12px;
+     width: 125px;
+     height: 20px;
+     outline: none;
+   }
+   .body .page-content .products-list .item {
+     width: 100%;
+     margin-bottom: 10px;
+   }
+   .body .compare-content .products-list .item a {
+     height: 125px;
+     padding: 10px 20px;
+   }
+   .body .page-content .products-list.right {
+     margin-top:10px;
+   }
+   .compare-details-content .images-area .image img {
+     height: 100px
+   }
+   .compare-details-content {
+     width: 95%;
+   }
+   .compare-details-content .images-area .image .name, .compare-details-content .compare-features .header {
+     font-size: 14px;
+   }
+   .compare-details-content .compare-features .details .product1, .compare-details-content .compare-features .details .product2 {
+     font-size: 12px;
+   }
+   .compare-details-content .images-area.float {
+     width: 95%;
+   }
+   .body .page-content .products-list.solutions .item img {
+     width: 80px;
+     height: 80px;
+   }
+   .body .page-content .products-list.solutions .item {
+     width: 50%;
+   }
+   .solution-inner .image {
+     display: block;
+     width: 80%;
+     padding: 0;
+     margin: auto;
+   }
+   .solution-inner .image-info {
+     width: 95%;
+     display: block;
+      margin: auto;
+   }
+   .solution-inner .image-info h3 {
+     font-size: 16px;
+   }
+   .solution-inner .image-info p{
+     font-size: 14px;
+   }
+   .solution-inner-list h4 {
+     font-size: 14px;
+     width: 95%;
+     margin: auto;
+   }
+   .solution-inner-list .image-info {
+     font-size: 12px;
+   }
+   .solution-inner-list .item {
+     margin-top: 10px;
+     padding-bottom: 10px;
+   }
+   .solution-details h3,
+   .solution-details h4,
+   .solution-details-list .image-info .title{
+     font-size: 14px;
+   }
+   .solution-details p,
+   .solution-details-list .image-info .description {
+     font-size: 12px;
+   }
+   .body .side-title {
+     margin-top: 20px;
+     font-size: 18px;
+   }
+    .tabs {
+      height: 40px;
+      line-height: 40px;
+    }
+    .download-content .download-list .icon {
+      display: none;
+    }
+    .download-content .download-list .content .title {
+      font-size: 14px;
+    }
+    .download-content .download-list .content .description {
+      font-size: 10px;
+    }
+    .download-content .download-list .content .links a {
+      font-size:10px;
+    }
+    .download-content .download-list .date .text{
+      font-size: 10px;
+    }
+    .download-content .download-list .date .number {
+      font-size: 12px;
+    }
+    .sidebar.category {
+      top: 80px;
+    }
+    .releasenotes.popup .container{
+      width: 95%;
+    }
+    .releasenotes.popup .container h3{
+      font-size: 14px;
+    }
+    .releasenotes.popup .container h4,
+    .releasenotes .version-list .version{
+      font-size: 12px;
+    }
+    .releasenotes .version-list .date,
+    .releasenotes .briefs .briefs-item{
+      font-size: 10px;
+    }
+    .popup .popup-close {
+      font-size: 16px;
+    }
+    .resellers,
+    .company {
+      width: 90%;
+      display: block;
+      margin: auto;
+      border: none;
+    }
+    .resellers .resellers-list .info {
+      margin-left: 15px;
+      padding:0;
+    }
+    .resellers .resellers-list .name{
+      font-size: 14px;
+    }
+    .resellers .resellers-list .description,
+    .resellers .resellers-list .contact,
+    .resellers .resellers-list .contact a{
+      font-size: 12px;
+    }
+    .resellers .resellers-list .contact {
+      margin-left: calc(10% + 15px);
+    }
+    .company {
+      padding: 0;
+    }
+    .company .address, .company .contact, .company .contact a {
+      font-size: 14px;
+    }
+    .news .filter-select {
+      width: 100%;
+    }
+    .news-list .content .title {
+      font-size: 12px;
+    }
+    .news-list .content .date{
+      font-size: 10px;
+    }
+    .news-list .content .summary{
+      font-size: 10px;
+    }
+    .news-list .news-item,
+    .news-details{
+      width: 90%;
+    }
+    .news-details .text {
+      padding: 0;
+    }
+    .news-details .title {
+      font-size: 16px;
+    }
+    .news-details .date{
+      margin: 10px 0;
+      font-size: 12px;
+    }
+    .news-details .content {
+      font-size: 14px;
+      line-height: 20px;
+    }
+    .body .news-details-links .share .text {
+      font-size: 12px;
+    }
+    .body .bottom-links .back-link {
+      width: auto;
+      padding: 0;
+      left: 0;
+    }
+    .body .news-details-links .share {
+      top: -5px;
+      left: auto;
+      right: 0;
+    }
+    .body .news-details-links .share a:last-child {
+      margin: 0;
+    }
+    .body .news-details-links {
+      width: 90%;
+    }
+    .help-area {
+      height: 250px;
+    }
+    .help-area .text {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+    .help-area input {
+      width: 70%;
+      height: 35px;
+      font-size: 16px;
+    }
+    .help-area button {
+      font-size: 16px;
+      height: 35px;
+      width: 35px;
+    }
+    .help-product-area .text {
+      font-size: 14px;
+    }
+    .help-product-area .product-container {
+      width: 50%;
+    }
+    .help-product-area .product {
+      width: 110px;
+      height: 110px;
+      line-height: 110px;
+      font-size: 12px;
+    }
+    .service-warranty, .model-advice {
+      width: 90%;
+      margin-top: 25px;
+    }
+    .service-warranty p, .model-advice p {
+      font-size: 14px;
+    }
+    .model-advice-form {
+      width: 90%;
+    }
+    .model-advice-form .field {
+      display: block;
+      width: 100%;
+    }
+    .model-advice-form input, .model-advice-form textarea {
+      width: calc(100% - 12px);
+      margin: 3px 0 15px 0;
+    }
+    .model-advice-form .advice-btn {
+      width: 80px;
+    }
+    .tabs .item {
+      font-size: 16px;
+    }
+    .support-product .tabs-list {
+      margin: 30px auto;
+    }
+    .support-product .tabs-list .item {
+      line-height: 50px;
+    }
+    .support-product .tabs-list .item .title, .accordion-item h4 {
+      font-size: 16px;
+    }
+    .support-product .tabs-list .item .opener {
+      font-size: 22px;
+    }
+    .accordion-item p {
+      font-size: 12px;
+    }
+    .search-cat {
+      width: 90%;
+    }
+    .search-cat .title {
+      font-size: 18px;
+    }
+    .search-cat .link-title {
+      font-size: 16px;
+    }
+    .search-cat .link,
+    .search-cat .see-all,
+    .total-result {
+      font-size: 14px;
+    }
+    .search-cat .brief {
+      font-size: 12px;
+    }
+    .search-button {
+      font-size: 12px;
+    }
+    .popup .popup-close {
+      right:5px;
+    }
 }

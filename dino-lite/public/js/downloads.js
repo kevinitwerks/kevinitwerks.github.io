@@ -28,6 +28,8 @@ function CatSidebar() {
       $('.download-list .item').hide();
       $('.download-list .item.'+cat).show();
     }
+    $('.mobile-filter .title .text').text($(this).text());
+    filterBar.closeFilter();
   })
 }
 function ReleaseNotePopUp() {

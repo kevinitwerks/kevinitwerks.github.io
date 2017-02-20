@@ -38,7 +38,7 @@ function compareItemSelectedHandler() {
   function checkSelected() {
     switch (selected) {
       case 2:
-        instruction.text('');
+        instruction.html('&nbsp;');
         compareBtn.removeClass('disabled');
         compareItem.not('.selected').addClass('disabled');
         break;

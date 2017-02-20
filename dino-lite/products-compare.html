@@ -10,6 +10,7 @@
 </head>
 <body>
   <div class="header">
+    <a class="mobile-menu"><i class="fa fa-bars" aria-hidden="true"></i></a>
     <a href="home.html" class="title">
       <div class="main-title">Dino-Lite</div>
       <div class="sub-title">Digital Microscope</div>
@@ -29,6 +30,9 @@
         <i class="fa fa-search" aria-hidden="true"></i>
       </div>
     </div>
+  </div>
+  <div class="mobile-filter">
+    <div class="title">Filter <i class="fa fa-angle-down" aria-hidden="true"></i></div>
   </div>
   <div class="body">
     <h3 class="side-title">Compare Products</h3>
@@ -150,7 +154,7 @@
       <div class="compare-content">
         <div class="instruction-area">
           <h4 class="instruction">Select two models for a more detailed comparison</h4>
-          <button class="compare-button disabled">Compare products</button>
+          <div class="compare-button-container"><button class="compare-button disabled">Compare products</button></div>
         </div>
         <ul class="products-list right">
           <li class="item">
@@ -213,7 +217,7 @@
     </div>
   </div>
   <script src="public/js/jquery-1.12.4.min.js"></script>
-  <script src="public/js/search.js"></script>
+  <script src="public/js/util.js"></script>
   <script src="public/js/products-compare.js"></script>
 </body>
 </html>
