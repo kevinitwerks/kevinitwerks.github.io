@@ -2711,7 +2711,7 @@ span.select2-selection.select2-selection--single {
     font-size: 14px;
   }
 }
-@media (max-width: 667px) {
+@media (max-width: 666px) {
   .releasenotes.popup .container {
     min-height: 300px;
   }

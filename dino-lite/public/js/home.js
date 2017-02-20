@@ -7,7 +7,7 @@ $(function(){
     $('.body .submenu a').removeClass('active');
     $(this).addClass('active');
     scrollToDown();
-    if(window.innerWidth < 668) {
+    if(window.innerWidth < 667) {
       $('.body .submenu').scrollLeft(scrollLeftRecord[$('.body .submenu a').index($(this))] - 100);
     }
   });
