@@ -2409,7 +2409,11 @@ span.select2-selection.select2-selection--single {
   .show-mobilemenu {
     overflow: hidden;
   }
-  .header .navigator {
+  /*.show-mobilemenu .header .navigator {
+    left: 0;
+  }*/
+  .header .navigator .link {
+    z-index: 1;
     position: fixed;
     left: -200px;
     width: 200px;
@@ -2422,11 +2426,8 @@ span.select2-selection.select2-selection--single {
     overflow-y: auto;
     border-right: 1px solid #ccc;
   }
-  .show-mobilemenu .header .navigator {
+  .show-mobilemenu .header .navigator .link {
     left: 0;
-  }
-  .header .navigator .link {
-    z-index: 1;
   }
   .header .navigator::after {
     display: none;
@@ -2437,7 +2438,7 @@ span.select2-selection.select2-selection--single {
     height: 100%;
     width: calc(100vw - 200px);
     background: rgba(0,0,0,.5);
-    z-index: 0;
+    z-index: 5;
   }
   .show-mobilemenu .header .navigator::after {
     display: block;
