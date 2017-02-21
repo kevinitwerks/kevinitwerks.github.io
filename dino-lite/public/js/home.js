@@ -43,7 +43,7 @@ function homepageProductsAnimation(show) {
 }
 function scrollToDown() {
   var scrollTop = $('.body .submenu').offset().top;
-  $('body').animate({
+  $('body,html').animate({
     scrollTop: scrollTop
   }, 300);
 }
