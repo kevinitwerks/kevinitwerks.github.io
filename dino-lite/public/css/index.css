@@ -651,11 +651,11 @@ body {
 }
 .body .submenu {
   height: 50px;
-  background: #0068B7;
   text-align: center;
   line-height: 50px;
   display: table;
   width: 100%;
+  background: #0068B7;
 }
 .body .submenu a{
   color: #fff;
@@ -664,9 +664,29 @@ body {
   font-size: 1.188rem;
   cursor: pointer;
   display: table-cell;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+}
+.body .submenu a::before {
+  content: '';
+  background: #fff;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  -webkit-transition: all .2s;
+  -moz-transition: all .2s;
+  -o-transition: all .2s;
+  transition: all .2s;
+  z-index: -1;
+}
+.body .submenu a.active::before, .body .submenu a:hover::before {
+  left: 0%;
 }
 .body .submenu a.active, .body .submenu a:hover {
-  background: #fff;
   color: #0068B7;
 }
 .body .submenu a:last-child {
@@ -2154,6 +2174,15 @@ span.select2-selection.select2-selection--single {
   margin: 0 0 40px 0;
   line-height: normal;
   color: #888;
+}
+.homepage-products {
+  position: absolute;
+  overflow-x: hidden;
+  width: 100%;
+}
+.homepage-products .item {
+  position: relative;
+  left: 100%;
 }
 @media (max-width: 1280px) {
   body {
